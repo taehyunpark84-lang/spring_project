@@ -6,19 +6,22 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Insert title here</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="<%= request.getContextPath() %>/css/board.css">
 </head>
-<body>
+<body class="board-list">
 	<div class="container">
 	  <h2>Spring으로 만든 게시판입니다.</h2>
 	  <div class="card">
 	    <div class="card-header bg-warning">게시글 목록</div>
 	    <div class="card-body">
 	    	<!-- 게시글 목록 -->
+		<div class="board-list-table">
 	    	<table class="table table-hover">
 	    		<thead> <!-- 본문과 머리글을 구분하기 위한 태그 -->
 					<tr class="table-warning">
@@ -54,6 +57,7 @@
 					
 				</tbody>
 	    	</table>
+		</div>
 	    	
 	    	<a href="boardInsertForm.do" class="btn btn-outline-primary">글쓰기</a>
 
